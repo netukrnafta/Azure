@@ -343,5 +343,5 @@ else
 {
   Write-Output -InputObject 'Both FW1 and FW2 Up - No action is required'
 }
-Write-Output -InputObject 'Waiting $IntBetweenRuns seconds before next attempt'
+Write-Output -InputObject "Waiting $IntBetweenRuns seconds before next attempt"
 Start-Sleep $IntBetweenRuns
