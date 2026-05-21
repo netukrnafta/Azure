@@ -75,6 +75,7 @@ $FailOver = $True              # Trigger to enable fail-over to secondary NVA fi
 $FailBack = $True              # Trigger to enable fail-back to primary NVA firewall is secondary NVA firewall drops when active
 $IntTries = $env:FWTRIES       # Number of Firewall tests to try 
 $IntSleep = $env:FWDELAY       # Delay in seconds between tries
+$IntBetweenRuns = $env:IntBetweenRuns       # Time gap between running script in seconds
 
 #--------------------------------------------------------------------------
 # Code blocks for supporting functions
@@ -342,3 +343,4 @@ else
 {
   Write-Output -InputObject 'Both FW1 and FW2 Up - No action is required'
 }
+Start-Sleep $IntBetweenRuns
